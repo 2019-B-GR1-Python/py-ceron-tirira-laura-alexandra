@@ -59,7 +59,7 @@ serie_a= pd.Series(orden)
 datos_mes["orden"] = serie_a
 mes_dat = datos_mes.sort_values('orden')
 mes = np.array(mes_dat["Mes"])
-matrimonios = np.array(datos_mes["Matrimonios"])
+matrimonios = np.array(mes_dat["Matrimonios"])
 #graficar
 X = mes
 Y = matrimonios

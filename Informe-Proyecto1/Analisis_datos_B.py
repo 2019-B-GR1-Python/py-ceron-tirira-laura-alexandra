@@ -24,7 +24,7 @@ datos_provincia = df19.rename(columns={'index':'Provincia','prov_insc':'Divorcio
 provincia = (datos_provincia["Provincia"]).tolist()
 divorcio = (datos_provincia["Divorcios"]).tolist()
 #graficar
-plt.figure(figsize=(40,15))
+plt.figure(figsize=(50,15))
 plt.pie(divorcio, labels=provincia, autopct='%1.1f%%', shadow=True)
 plt.title("Divorcios por provincia", bbox={"facecolor":"0.8", "pad":5})
 
