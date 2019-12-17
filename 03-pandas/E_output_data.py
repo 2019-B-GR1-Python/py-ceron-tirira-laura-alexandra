@@ -66,8 +66,17 @@ hoja_artistas.conditional_format(rango_celdas,formato_artistas)
 writer.save()
 
 
+####   SQl   #######
+
+with sqlite3.connect("bdd_artist.db") as conexion:
+    df5.to_sql('py_artistas', conexion)
 
 
+## whith mysql.connect('mysql://user.password@ip:puerto/nombre_base')
+#se exporta en fromato complejo
+df.to_json('artistas.json')
+
+df.to_json('artistas.json', orient='table')
 
 
 
