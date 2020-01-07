@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* ID # + nombre id*/
+        #titulo-uno{
+            background-color: red;
+        }
+        /* NOMBRE ETIQUETA  nombre-etiqueta*/
+        p{
+            color: white;
+            background-color: black;
+        }
+        body{
+            background-color: pink;
+        }
+
+        /* clases  .+nombre de la clase*/
+        .texto-amarillo{
+            color: yellow;
+        }
+        .texto-azul{
+            color: cornflowerblue;
+        }
+
+        .fondo-verde{
+            background-color: greenyellow;
+        }
+
+        .texto-cafe{
+            color: brown;
+        }
+
+        /* etiqueta dentro de otra SELECTOR*/
+        body > ul > li > p {
+            background-color: coral;
+            color: darkgrey;
+        }
+
+        li > p.texto-amarillo{
+            color: gold;
+        }
+
+        p.texto-azul.texto-amarillo.texto-cafe.texto-blanco{
+            color: palevioletred;
+        }
+        
+
+/* tiene un orden al aplicar los estilos
+jerarquia
+
+si se define un style dentro de la etiqueta es mas importante que todos
+
+primero es el identificador ID
+segundo la clase
+tercero la etiqueta
+
+el ultimo definido > anterior definido
+
+ */
+
+    </style>
+</head>
+<body>
+    <!-- <h1 id="titulo-uno" class="texto-marillo">Titulo</h1>     -->
+    <h1 class="texto-amarillo">Titulo</h1>    
+    <p id="titulo-uno" 
+    class="fondo-verde" 
+    style="background-color: indigo;">
+     mi mamá </p> 
+     <!-- no se debe poner un style dentro de la etiqueta es mala practica -->
+    <!-- si se pone diferentes 
+        clases la que se defina ultima 
+        es la que predomina -->
+    <p class="texto-blanco 
+    texto-cafe 
+    texto-azul 
+    texto-amarillo"> me mima </p>
+    <style>
+    .texto-blanco
+    {
+        color: white;
+    }
+    </style>
+<!-- cuando se tiene estilos con los mismos identificadores  se aplica el ultimo que se define -->
+<ul>
+    <li>
+        <p>Muy </p>
+    </li>
+    <li>
+        <p>buenos</p>
+    </li>
+    <li>
+        <p class="texto-amarillo">dias</p>
+    </li>
+</ul>
+
+
+
+
+</body>
+</html>

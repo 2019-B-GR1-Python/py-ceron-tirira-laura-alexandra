@@ -17,7 +17,7 @@ seccion_df = df.iloc[49980:50019,:].copy()
 
 df_agrupado = seccion_df.groupby('artist')
 
-type(df_agrupado)
+print(type(df_agrupado))
 
 for columna_agrupada, df_completo in df_agrupado:
     print(type(columna_agrupada)) # str
@@ -62,7 +62,7 @@ def llenar_valores_vacios(series, tipo):
                 else:
                     pass
             promedio = suma / numero_valores
-            series_valores_llenos = series.fillna(promedio)
+            series_valores_llenos = series.fillna(promedio) #te llena todos los que tenga na con un valor
             return series_valores_llenos
         if(tipo == 'value_counts'):
             conteo_unidades = series.value_counts()          
