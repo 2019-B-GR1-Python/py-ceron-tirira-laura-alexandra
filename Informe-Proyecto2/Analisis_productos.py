@@ -15,9 +15,15 @@ path_productos ="C:\\Users\\Laura\\Documents\\GitHub\\py-ceron-tirira-laura-alex
 df_productos = pd.read_json(path_productos)
 df = pd.DataFrame(df_productos)
 
+
+categorias = df.categoria.value_counts()
+
+
+
 df1 = df.groupby(['farmacia','categoria'])['categoria']#.count()
 d = df1.groups()
-df2 = df.groupby('categoria')
+
+df2 = df.groupby('categoria').values_count()
 
 df1 = df.groupby(['farmacia','categoria'])['categoria'].count()
 a= df2.first()
@@ -26,4 +32,4 @@ a= df2.first()
 
 df2 = df.groupby('edad_muj')['edad_muj'].count()
 
-b= df.groupby('farmacia')['categoria'].sum().to_frame().reset_index()
+b= df.groupby('farmacia')['categoria'].sum().to_frame().reset_index() Bebes y futura mama

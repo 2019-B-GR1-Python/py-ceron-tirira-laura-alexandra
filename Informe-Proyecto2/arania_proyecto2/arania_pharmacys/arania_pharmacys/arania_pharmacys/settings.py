@@ -67,7 +67,8 @@ ROBOTSTXT_OBEY = True
 #ITEM_PIPELINES = {
 #    'arania_pharmacys.pipelines.AraniaPharmacysPipeline': 300,
 #}
-
+FEED_FORMAT = 'json'
+FEED_URI = 'tmp/productos_pharmacys.json'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
