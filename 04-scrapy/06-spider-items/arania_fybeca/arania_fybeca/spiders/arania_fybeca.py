@@ -25,7 +25,7 @@ class AraniaFybeca(scrapy.Spider):
                 producto_loader =ItemLoader(item = ProductoFybeca(),selector = producto)
                 producto_loader.default_output_processor=TakeFirst()
                 producto_loader.add_css('titulo','a.name::text')
-                producto_loader.add_xpath('imagen','div[contains(@class,"detail")]/a[contains(@class,"image")]/img[contains(@id,"gImg")]/@src')    
+                producto_loader.add_xpath('imagen','///*[@id="tab7"]/article/header/h2/a/@href/a[contains(@class,"image")]/img[contains(@id,"gImg")]/@src')    
                 yield producto_loader.load_item()
 
 
